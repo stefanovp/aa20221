@@ -6,7 +6,7 @@ class AAFileUtils:
         with open(file_path) as file:
             for line in file:
                 if not line[0].isnumeric():
-                    current_set = line
+                    current_set = line.strip('\n')
                     test_data[current_set] = []
                 else:
                     if(current_set != None):
