@@ -36,11 +36,13 @@ class MergeSort():
         MergeSort.merge(arr, begin, mid, end)
 
 def main():
-    arr = [13,64,3423,767,979,34,123,4,66]
+    print("-"*5 + " MERGE SORT QUICKTEST " + "-"*5)
+    arr = [13, 64, 3423, 767, 979, 34, 123, 4, 66]
+    
     print("Before sort:", end="\n")
     print(arr)
     MergeSort.sort(arr, 0, len(arr) - 1)
-    print("Before sort:", end="\n")
+    print("After sort:", end="\n")
     print(arr)
 
 main()
