@@ -19,7 +19,7 @@ def instrumented_insertion_sort(dataset_data):
 def main():
     
     # Load data into memory
-    test_datasets = AAFileUtils.load_test_subjects("T1/test_data/DataSortB.txt")
+    test_datasets = AAFileUtils.load_test_subjects("T1/test_data/DataSort.in")
     print('Test data successfully loaded')
     print('Test Datasets:')
     for set_name in test_datasets:
@@ -30,14 +30,14 @@ def main():
     # ATENÇÂO: estamos sortando os datasets inplace, então somente um tipo
     # de sort abaixo pode estar descomentado. Caso contrario, tentaremos
     # sortaer dados já sorteados. 
-    # ps ctrl + k + c para comment varias linhas, ctrl + k + u para uncomment
+    # ps ctrl + k + c para comment varias linhas, ctrl + k + u para uncomment (no vscode!)
     for dataset_name in test_datasets:
         dataset_data = test_datasets[dataset_name]
         
-        elapsed = instrumented_insertion_sort(dataset_data)
-        print(f"Sorted {dataset_name}. ElapsedTime = {elapsed}s")
-
-        # elapsed = instrumented_merge_sort(dataset_data)
+        # elapsed = instrumented_insertion_sort(dataset_data)
         # print(f"Sorted {dataset_name}. ElapsedTime = {elapsed}s")
+
+        elapsed = instrumented_merge_sort(dataset_data)
+        print(f"Sorted {dataset_name}. ElapsedTime = {elapsed}s")
 
 main()
