@@ -9,7 +9,9 @@ def main():
     
     print("Before sort:", end="\n")
     print(main_array)
+
     QuickSort.sort(main_array)
+    
     print("After sort:", end="\n")
     print(main_array)
 

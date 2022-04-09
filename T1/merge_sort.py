@@ -41,7 +41,9 @@ def main():
     
     print("Before sort:", end="\n")
     print(arr)
+
     MergeSort.sort(arr, 0, len(arr) - 1)
+    
     print("After sort:", end="\n")
     print(arr)
 
